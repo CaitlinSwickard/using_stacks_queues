@@ -1,0 +1,3 @@
+
+const generateBinary = require('./generateBinary')
+
