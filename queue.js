@@ -40,3 +40,4 @@ class Queue {
     return str;
   }
 }
+module.exports = Queue;

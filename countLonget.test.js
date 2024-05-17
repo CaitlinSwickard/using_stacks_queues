@@ -1,5 +1,6 @@
 
-// const Queue = require('./Queue');
+// const Stack = require('./Stack');
+const Queue = require('./Queue');
 const countLongest = require('./countLongest')
 
 // basic test template
@@ -8,15 +9,15 @@ const countLongest = require('./countLongest')
 // })
 
 test('Count Hello Test', () => {
-  expect(count_longest(new Queue(Array.from("hello")))).toBe(2);
+  expect(countLongest(new Queue(Array.from("hello")))).toBe(2);
 });
 
 test('Count M5 Test', () => {
-  expect(count_longest(new Queue(Array.from("m".repeat(5))))).toBe(5);
+  expect(countLongest(new Queue(Array.from("m".repeat(5))))).toBe(5);
 });
 
 test('Count O3 Test', () => {
-  expect(count_longest(new Queue(Array.from("hooop")))).toBe(3);
+  expect(countLongest(new Queue(Array.from("hooop")))).toBe(3);
 });
 
 

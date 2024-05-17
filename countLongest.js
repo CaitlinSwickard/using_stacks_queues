@@ -3,12 +3,24 @@
 // For example: count_longest( Q[h, e, l, l, o] )	2
 // Your solution should not use any built-in or library functions other than those in the Stack and Queue classes provided.Your solution should not use any built-in or library functions other than those in the Stack and Queue classes provided.
 
-// from Queue import Queue
-// from Stack import Stack
+
+const Stack = require('./Stack');
+const Queue = require('./Queue');
 
 
 const countLongest = (q) => {
+  console.log('hi')
 
 }
 
-module.exports = countLongest 
+
+
+const main = () => {
+  console.log(countLongest("hello") === 2)
+  console.log(countLongest("mmmmm") === 5)
+  console.log(countLongest("heee") === 3)
+}
+main()
+
+
+module.exports = countLongest

@@ -36,3 +36,4 @@ class Stack {
     return str;
   }
 }
+module.exports = Stack;
