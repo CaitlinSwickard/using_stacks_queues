@@ -2,9 +2,9 @@
   "name": "using_stacks_and_queues",
   "version": "1.0.0",
   "description": "",
-  "main": "Queue.js",
+  "main": "reverse.js",
   "scripts": {
-    "test": "test"
+    "test": "jest"
   },
   "keywords": [],
   "author": "",

@@ -7,12 +7,12 @@ class Stack {
 
   // Functions to call on stack
   // push(item) - add to top of stack
-  push(element) {
-    this.items.push(element);
+  push(data) {
+    this.items.push(data);
   }
 
   // pop() - removes item from top of stack and returns it
-  poop() {
+  pop() {
     if (this.items.length == 0)
       return "Underflow";
     return this.items.pop();
@@ -36,4 +36,5 @@ class Stack {
     return str;
   }
 }
+
 module.exports = Stack;
