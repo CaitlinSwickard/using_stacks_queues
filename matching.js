@@ -5,7 +5,7 @@
 
 
 const Stack = require('./Stack');
-// const Queue = require('./Queue');
+
 
 // create a checker variable for opening and closing braces
 const open = ['(', '[', '{'];
@@ -14,7 +14,7 @@ const close = [')', ']', '}'];
 const matcher = (str) => {
   let stack = new Stack();
 
-  // loop through the string
+  // loop through the input string
   for (let i = 0; i < str.length; i++) {
     // if the str[i] is in the open checker, push it to stack
     if (open.includes(str[i])) {
@@ -27,7 +27,8 @@ const matcher = (str) => {
         return false;
       }
 
-      //  If the current character is a closing bracket and there are elements in the stack, the top element of the stack (the last opening bracket) is popped off the stack.
+      //  If the current character is a closing bracket and there are elements in the stack, 
+      // the top element of the stack (the last opening bracket) is popped off the stack.
       let topChar = stack.pop();
       //finds the index of the current closing bracket in the close array.
       let index = close.indexOf(str[i]);
@@ -41,7 +42,6 @@ const matcher = (str) => {
   // if the stack is empty (all brackets are properly matched)
   return stack.isEmpty()
 }
-
 
 
 const main = () => {
