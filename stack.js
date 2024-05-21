@@ -2,38 +2,58 @@
 class Stack {
 
   constructor() {
-    this.items = [];
+    this.stack = [];
   }
 
   // Functions to call on stack
   // push(item) - add to top of stack
   push(data) {
-    this.items.push(data);
+    this.stack.push(data);
   }
 
   // pop() - removes item from top of stack and returns it
   pop() {
-    if (this.items.length == 0)
+    if (this.stack.length == 0)
       return "Underflow";
-    return this.items.pop();
+    return this.stack.pop();
   }
 
   // peek() - return top element of stack, does not remove it
   peek() {
-    return this.items[this.items.length - 1];
+    return this.stack[this.stack.length - 1];
   }
 
   // isEmpty() - returns true if stack is empty
   isEmpty() {
-    return this.items.length == 0;
+    return this.stack.length === 0;
   }
 
   // printStack()
-  printStack() {
+  print() {
     let str = '';
-    for (let i = 0; i < this.items.length; i++)
-      str += this.items[i] + " ";
+    for (let i = 0; i < this.stack.length; i++)
+      str += this.stack[i] + " ";
     return str;
+  }
+
+  // clear() - removes all items from stack
+  clear() {
+    this.stack = [];
+  }
+
+  toString() {
+    return this.stack.toString();
+
+  }
+
+  [Symbol.iterator]() {
+    let index = this.stack.length - 1;
+    return {
+      next: () => ({
+        value: this.stack[index--],
+        done: index < 0
+      })
+    }
   }
 }
 

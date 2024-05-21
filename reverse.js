@@ -19,7 +19,7 @@ function reverse(q_orig) {
     stack.push(q_orig.dequeue());
     console.log(stack)
   }
-  // Pop items from the stack and enqueue them back into the queue
+  // Pop items from the stack and enqueue them into the new queue
   while (!stack.isEmpty()) {
     new_q.enqueue(stack.pop());
   }
